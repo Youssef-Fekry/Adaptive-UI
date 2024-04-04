@@ -1,3 +1,4 @@
+import 'package:adaptieve_ui/widgets/custom_item.dart';
 import 'package:flutter/material.dart';
 
 class CustomGridView extends StatelessWidget {
@@ -9,9 +10,7 @@ class CustomGridView extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, crossAxisSpacing: 16, mainAxisSpacing: 16),
       itemBuilder: (context, index) {
-        return Container(
-          color: Color(0xffB4B4B4),
-        );
+        return CustomItem();
       },
       itemCount: 4,
     );
