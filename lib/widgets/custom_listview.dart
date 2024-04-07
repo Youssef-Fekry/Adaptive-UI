@@ -13,8 +13,8 @@ class CustomListView extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: 20,
             itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.only(right: 16.0),
+              return const Padding(
+                padding: EdgeInsets.only(right: 16.0),
                 child: AspectRatio(aspectRatio: 1, child: CustomItem()),
               );
             }),

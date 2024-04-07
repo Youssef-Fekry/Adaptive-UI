@@ -10,7 +10,7 @@ class CustomItem2 extends StatelessWidget {
     return Container(
       height: 65,
       decoration: BoxDecoration(
-          color: Color(0xffececec), borderRadius: BorderRadius.circular(8)),
+          color:const  Color(0xffececec), borderRadius: BorderRadius.circular(8)),
     );
   }
 }

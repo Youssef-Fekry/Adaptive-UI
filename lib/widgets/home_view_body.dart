@@ -9,15 +9,15 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 16,
         ),
         child: LayoutBuilder(
           builder: (builder, constrains) {
             if (constrains.maxWidth > 600) {
-              return TabletLayout();
+              return const TabletLayout();
             } else {
-              return MobileLayout();
+              return const MobileLayout();
             }
           },
         ),

@@ -14,7 +14,7 @@ class CustomDrawerItemListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics:const NeverScrollableScrollPhysics(),
         itemCount: items.length,
         itemBuilder: (context, index) {
           return CustomDrawerItem(drawerItermModel: items[index]);

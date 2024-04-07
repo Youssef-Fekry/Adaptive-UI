@@ -7,10 +7,10 @@ class CustomSliverGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, crossAxisSpacing: 16, mainAxisSpacing: 16),
       itemBuilder: (context, index) {
-        return CustomItem();
+        return const CustomItem();
       },
       itemCount: 4,
     );
