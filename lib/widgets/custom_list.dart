@@ -1,8 +1,8 @@
 import 'package:adaptieve_ui/widgets/custom_item2.dart';
 import 'package:flutter/material.dart';
 
-class CustomList extends StatelessWidget {
-  const CustomList({super.key});
+class CustomSliverList extends StatelessWidget {
+  const CustomSliverList({super.key});
 
   @override
   Widget build(BuildContext context) {

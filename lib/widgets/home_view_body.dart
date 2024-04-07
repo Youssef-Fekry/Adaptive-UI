@@ -1,8 +1,6 @@
-import 'package:adaptieve_ui/widgets/custom_list.dart';
-import 'package:adaptieve_ui/widgets/custome_grid_view.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:adaptieve_ui/widgets/mobile_layout.dart';
+import 'package:adaptieve_ui/widgets/tablet_layout.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -11,29 +9,17 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
+        padding: EdgeInsets.symmetric(
           horizontal: 16,
         ),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: SizedBox(
-                height: 16,
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: LayoutBuilder(
-                builder: (context, constrains) {
-                  if (constrains.maxWidth > 600) {
-                    return Text('he');
-                  } else {
-                    return CustomGridView();
-                  }
-                },
-              ),
-            ),
-            CustomList(),
-          ],
+        child: LayoutBuilder(
+          builder: (builder, constrains) {
+            if (constrains.maxWidth > 600) {
+              return TabletLayout();
+            } else {
+              return MobileLayout();
+            }
+          },
         ),
       ),
     );
