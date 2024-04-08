@@ -15,8 +15,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    
       key: scafoldKey,
-      drawer:const CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: const Color(0xffDBDBDB),
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
           onTap: () {
             scafoldKey.currentState!.openDrawer();
           },
-          child:const  Icon(
+          child: const Icon(
             Icons.menu,
             color: Colors.white,
           ),

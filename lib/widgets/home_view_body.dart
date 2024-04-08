@@ -9,18 +9,19 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffDBDBDB),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 16,
         ),
         child: LayoutBuilder(
           builder: (builder, constrains) {
-            if (constrains.maxWidth > 600) {
-              return const TabletLayout();
-            } else if (constrains.maxWidth > 900) {
-              return const DeskTopLayout();
-            } else {
+            if (constrains.maxWidth < 600) {
               return const MobileLayout();
+            } else if (constrains.maxWidth < 900) {
+              return const TabletLayout();
+            } else {
+              return const DeskTopLayout();
             }
           },
         ),
