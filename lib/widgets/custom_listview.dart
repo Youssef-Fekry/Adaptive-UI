@@ -1,3 +1,4 @@
+import 'package:adaptieve_ui/constans.dart';
 import 'package:adaptieve_ui/widgets/custom_item.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class CustomListView extends StatelessWidget {
                 padding: EdgeInsets.only(right: 16.0),
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: CustomItem(),
+                  child: CustomItem(kPrimaryColor),
                 ),
               );
             }),

@@ -15,22 +15,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       key: scafoldKey,
       drawer: const CustomDrawer(),
       backgroundColor: const Color(0xffDBDBDB),
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: GestureDetector(
-          onTap: () {
-            scafoldKey.currentState!.openDrawer();
-          },
-          child: const Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      appBar: MediaQuery.sizeOf(context).width < 900
+          ? AppBar(
+              backgroundColor: Colors.black,
+              leading: GestureDetector(
+                onTap: () {
+                  scafoldKey.currentState!.openDrawer();
+                },
+                child: const Icon(
+                  Icons.menu,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          : null,
       body: const HomeViewBody(),
     );
   }
